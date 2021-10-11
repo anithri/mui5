@@ -1,7 +1,7 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
-import Helmet from "../components/helmet"
+import { Layout } from "../components/Layout"
+import { Helmet } from "../components/Helmet"
 
 const NotFoundPage = () => (
   <Layout>

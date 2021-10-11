@@ -1,28 +1,21 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { Layout } from "../components/Layout"
 
-import Layout from "../components/layout"
-import Helmet from "../components/helmet"
-
+import { GridContainer, gridAreas } from "../components/DisplayPageGrid"
+import { Logo } from '../components/Logo'
+import { Title } from '../components/Title'
+import { Nav } from '../components/Nav'
+import { Sidebar } from '../components/Sidebar'
+import { Chooser } from '../components/Chooser'
+import { Display } from '../components/Display'
 const IndexPage = () => (
-  <Layout>
-    <Helmet title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+  <Layout Grid={GridContainer} bgcolor="theme.primary.dark">
+    <Logo {...gridAreas.Logo} />
+    <Title {...gridAreas.Title} />
+    <Nav {...gridAreas.Nav} />
+    <Sidebar {...gridAreas.Sidebar} />
+    <Chooser {...gridAreas.Chooser} />
+    <Display {...gridAreas.Display} />
   </Layout>
 )
 
